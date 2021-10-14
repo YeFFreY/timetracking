@@ -42,7 +42,7 @@
                     clip-rule="evenodd" />
             </svg>
         </button>
-        <span>{{currentDateFormatted}}</span>
+        <span class="w-64 text-center">{{currentDateFormatted}}</span>
         <button class="h-8 w-8 bg-gray-300 flex items-center justify-center rounded-md" v-on:click="next('day')">
             <svg class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                 <path fill-rule="evenodd"
@@ -124,7 +124,7 @@
             },
             computed: {
                 currentDateFormatted() {
-                    return this.currentDate.format('DD/MM/YYYY');
+                    return this.currentDate.format('dddd, D MMMM YYYY');
                 },
                 workersIds() {
                     return this.workers.map(w => w.profile.id);
